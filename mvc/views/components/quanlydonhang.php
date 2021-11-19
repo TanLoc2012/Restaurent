@@ -10,6 +10,7 @@
       <th scope="col">Tổng số tiền</th>
       <th scope="col">Trạng thái</th>
       <th scope="col"></th>
+      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -30,9 +31,11 @@
         else if($data["orderItem"][$i]["status"] == 1) echo "Đang giao hàng";
         else if($data["orderItem"][$i]["status"] == 4) echo "Đã thanh toán";
         else echo "Giao dịch hoàn tất!";
+        if($data["orderItem"][$i]["status"] == 0 && $data["orderItem"][$i]["status"] == 4)
+          echo '<td><a href="http://localhost/Laptrinhweb/Home/confirmOrder/'.$data["orderItem"][$i]["id"].'/'.$user["id"].'/'.$data["orderItem"][$i]["table_id"].'/2"><button class="btn btn-danger">Hủy</button><a/></td>';
         echo '</td>';
-        if($data["orderItem"][$i]["status"] != 3)
-          echo '<td><a href="http://localhost/Laptrinhweb/Home/confirmOrder/'.$data["orderItem"][$i]["id"].'/'.$user["id"].'/'.$data["orderItem"][$i]["table_id"].'"><button class="btn btn-danger">Hoàn thành giao dịch</button><a/></td>
+        if($data["orderItem"][$i]["status"] != 3 && $data["orderItem"][$i]["status"] != 2)
+          echo '<td><a href="http://localhost/Laptrinhweb/Home/confirmOrder/'.$data["orderItem"][$i]["id"].'/'.$user["id"].'/'.$data["orderItem"][$i]["table_id"].'/3"><button class="btn btn-danger">Hoàn thành giao dịch</button><a/></td>
       </tr>';
     }
   ?>

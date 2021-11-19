@@ -9,14 +9,14 @@
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <div class="li-blog-banner">
-                                                    <a href=""><img style="max-height:400px;max-width:500px" class="img-full" src="https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-star-5-3_3.jpg" alt=""></a>
+                                                    <a href="http://localhost/Laptrinhweb/Home/productDetail/49"><img style="max-height:400px;max-width:500px" class="img-full" src="https://cdn.tgdd.vn/2021/11/CookDishThumb/cach-nau-mi-kim-chi-chua-cay-dam-vi-sieu-nhanh-chong-ngay-tai-thumb-620x620.jpg" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="li-blog-content">
                                                     <div class="li-blog-details">
-                                                        <h3 class="li-blog-heading pt-xs-25 pt-sm-25"><a href="">Điện thoại Vsmart</a></h3>
-                                                        <p>Miễn phí 4G tốc độ cao 10GB/ Tháng trong 18 tháng - Công nghệ Vsim ảo đầu tiên Cấu hình vượt trội, trải nghiệm mạnh mẽ - Chip Helio G35 8 nhân, RAM 3GB Màn hình siêu rộng, xem phim thả ga - Màn hình IPS LCD 6.528 inch, viền siêu mỏng Sử dụng cả ngày dài - Pin 5000mAh, sạc nhanh 15W</p>
+                                                        <h3 class="li-blog-heading pt-xs-25 pt-sm-25"><a href="http://localhost/Laptrinhweb/Home/productDetail/49">Mì kim chi chua cay</a></h3>
+                                                        <p>Mì khô gà cay vị kim chi là một trong những sản phẩm nằm trong “bộ sưu tập” mì gà cay nổi tiếng của Samyang. Với sợi mì dai, mềm và vàng óng quyện với nước sốt Buldak cay truyền thống. Và điểm nhấn khác biệt là vị kim chi chua nhẹ. Gói sốt Buldak kim chi cũng giúp cho dĩa mì có mì vàng cam rất bắt mắt và mùi thơm khó cưỡng. </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -31,14 +31,14 @@
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <div class="li-blog-banner">
-                                                    <a href=""><img style="max-height:400px;max-width:500px" class="img-full" src="https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/v/s/vsmart-joy-4_2_.png" alt=""></a>
+                                                    <a href="http://localhost/Laptrinhweb/Home/productDetail/52"><img style="max-height:400px;max-width:500px" class="img-full" src="https://cdn.tgdd.vn/2021/10/CookDishThumb/cach-nau-pho-nam-bo-thom-lung-dam-vi-cuc-don-gian-tai-nha-thumb-620x620.jpg" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="li-blog-content">
                                                     <div class="li-blog-details">
-                                                        <h3 class="li-blog-heading pt-xs-25 pt-sm-25"><a href="">Điện thoại Vsmart đen siêu mỏng</a></h3>
-                                                        <p>Miễn phí 4G tốc độ cao 10GB/ Tháng trong 18 tháng - Công nghệ Vsim ảo đầu tiên Cấu hình vượt trội, trải nghiệm mạnh mẽ - Chip Helio G35 8 nhân, RAM 3GB Màn hình siêu rộng, xem phim thả ga - Màn hình IPS LCD 6.528 inch, viền siêu mỏng Sử dụng cả ngày dài - Pin 5000mAh, sạc nhanh 15W</p>
+                                                        <h3 class="li-blog-heading pt-xs-25 pt-sm-25"><a href="http://localhost/Laptrinhweb/Home/productDetail/52">Phở nạm bò</a></h3>
+                                                        <p>Mì khô gà cay vị kim chi là một trong những sản phẩm nằm trong “bộ sưu tập” mì gà cay nổi tiếng của Samyang. Với sợi mì dai, mềm và vàng óng quyện với nước sốt Buldak cay truyền thống. Và điểm nhấn khác biệt là vị kim chi chua nhẹ. Gói sốt Buldak kim chi cũng giúp cho dĩa mì có mì vàng cam rất bắt mắt và mùi thơm khó cưỡng. </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -50,14 +50,14 @@
                                         <div class="row">
                                             <div class="col-lg-6">
                                                 <div class="li-blog-banner">
-                                                    <a href=""><img style="max-height:400px;max-width:500px" class="img-full" src="https://cdn.cellphones.com.vn/media/catalog/product/cache/7/image/1000x/040ec09b1e35df139433887a97daa66f/i/p/iphone-12-pro-max_3__7.jpg" alt=""></a>
+                                                    <a href="http://localhost/Laptrinhweb/Home/productDetail/51"><img style="max-height:400px;max-width:500px" class="img-full" src="https://cdn.tgdd.vn/2021/11/CookDishThumb/cach-nau-hu-tieu-sa-te-voi-bo-vien-cho-bua-sang-thom-ngon-thumb-620x620.jpg" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="li-blog-content">
                                                     <div class="li-blog-details">
-                                                        <h3 class="li-blog-heading pt-xs-25 pt-sm-25"><a href="">Điện thoại Iphone siêu mới</a></h3>
-                                                        <p>Miễn phí 4G tốc độ cao 10GB/ Tháng trong 18 tháng - Công nghệ Vsim ảo đầu tiên Cấu hình vượt trội, trải nghiệm mạnh mẽ - Chip Helio G35 8 nhân, RAM 3GB Màn hình siêu rộng, xem phim thả ga - Màn hình IPS LCD 6.528 inch, viền siêu mỏng Sử dụng cả ngày dài - Pin 5000mAh, sạc nhanh 15W</p>
+                                                        <h3 class="li-blog-heading pt-xs-25 pt-sm-25"><a href="http://localhost/Laptrinhweb/Home/productDetail/51">Hủ tiếu</a></h3>
+                                                        <p>Mì khô gà cay vị kim chi là một trong những sản phẩm nằm trong “bộ sưu tập” mì gà cay nổi tiếng của Samyang. Với sợi mì dai, mềm và vàng óng quyện với nước sốt Buldak cay truyền thống. Và điểm nhấn khác biệt là vị kim chi chua nhẹ. Gói sốt Buldak kim chi cũng giúp cho dĩa mì có mì vàng cam rất bắt mắt và mùi thơm khó cưỡng. </p>
                                                     </div>
                                                 </div>
                                             </div>

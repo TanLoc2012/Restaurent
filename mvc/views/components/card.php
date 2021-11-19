@@ -39,7 +39,7 @@
                       <div class="d-flex justify-content-between">
                         <div>
                           <h5>'.$data["orderDetails"][$i]["title"].'</h5>
-                          <p class="mb-3 text-muted text-uppercase small">Số lượng: '.number_format($data["orderDetails"][$i]["price"]).' đ</p>
+                          <p class="mb-3 text-muted text-uppercase small">Giá: '.number_format($data["orderDetails"][$i]["price"]).' đ</p>
                           <p class="mb-3 text-muted text-uppercase small">Số lượng: '.$data["num"][$i].'</p>
                         </div>
                       </div>
