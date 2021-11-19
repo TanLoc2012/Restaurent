@@ -59,6 +59,27 @@
             ?>
         " type="button" class="btn btn-primary">
             <a style="color:white;text-decoration:none" href="http://localhost/Laptrinhweb/Home/productList/<?=$data["category_id"]?>/1/4">Tên (Z &gt; A)</a></button>
+        <button style="margin-bottom: 5px; margin-right: 5px;
+            <?php
+                if($data["fillter"] == 5)
+                    echo "background-color:red";
+            ?>
+        " type="button" class="btn btn-primary">
+            <a style="color:white;text-decoration:none" href="http://localhost/Laptrinhweb/Home/productList/<?=$data["category_id"]?>/1/5">Giá dưới 100,000đ</a></button>
+        <button style="margin-bottom: 5px; margin-right: 5px;
+            <?php
+                if($data["fillter"] == 6)
+                    echo "background-color:red";
+            ?>
+        " type="button" class="btn btn-primary">
+            <a style="color:white;text-decoration:none" href="http://localhost/Laptrinhweb/Home/productList/<?=$data["category_id"]?>/1/6">Giá từ 100,000đ -&gt; 300,000đ</a></button>
+        <button style="margin-bottom: 5px; margin-right: 5px;
+            <?php
+                if($data["fillter"] == 7)
+                    echo "background-color:red";
+            ?>
+        " type="button" class="btn btn-primary">
+            <a style="color:white;text-decoration:none" href="http://localhost/Laptrinhweb/Home/productList/<?=$data["category_id"]?>/1/7">Giá trên 300,000đ</a></button>
        
         <hr>
         <?php

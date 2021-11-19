@@ -239,9 +239,9 @@ class Home extends Controller{
         ]);
     }
 
-    public function confirmOrder($orderId, $user_id,$table_id){
+    public function confirmOrder($orderId, $user_id,$table_id,$status){
         $orderSuccessModel = $this->model("OrderModel");
-        $orderSuccessModel->updateStatusOrder($orderId);
+        $orderSuccessModel->updateStatusOrder($orderId,$status);
         $orderItem = $orderSuccessModel->getorders($user_id);
         $orderSuccessModel->updateStatusTable(0,$table_id);
 

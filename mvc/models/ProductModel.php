@@ -21,6 +21,24 @@ class ProductModel extends DB{
                     where Product.deleted = 0
                     ORDER BY product.title DESC";
         }
+        else if($fillter == 5){
+            $sql = "select Product.*, Category.name as category_name 
+                    from Product left join Category on Product.category_id = Category.id 
+                    where Product.price <= 100000 AND product.deleted=0
+                    ORDER BY product.price ASC";
+        }
+        else if($fillter == 6){
+            $sql = "select Product.*, Category.name as category_name 
+                    from Product left join Category on Product.category_id = Category.id 
+                    where Product.price > 100000 AND product.price < 300000 AND product.deleted=0
+                    ORDER BY product.price ASC";
+        }
+        else if($fillter == 7){
+            $sql = "select Product.*, Category.name as category_name 
+                    from Product left join Category on Product.category_id = Category.id 
+                    where product.price >= 300000 AND product.deleted=0
+                    ORDER BY product.price ASC";
+        }
         else $sql = "select Product.*, Category.name as category_name 
                     from Product left join Category on Product.category_id = Category.id 
                     where Product.deleted = 0
