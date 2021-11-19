@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 19, 2021 lúc 09:13 AM
+-- Thời gian đã tạo: Th10 19, 2021 lúc 01:26 PM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 7.4.24
 
@@ -106,14 +106,14 @@ INSERT INTO `orders` (`id`, `fullname`, `email`, `phone`, `user_id`, `status`, `
 (38, 'Nguyễn Tấn Lộc', 'ntnlc81@yahoo.com', '0347651292', 37, 3, 0, '462 trần hưng đạo phường 2 quận 5', '2021-03-17 18:09:47', 495000, 0),
 (39, 'Nguyễn Tấn Lộc', 'ntnlc81@yahoo.com', '0347651292', 37, 3, 0, '462 trần hưng đạo phường 2 quận 5', '2021-02-17 18:09:47', 495000, 0),
 (40, 'Nguyễn Tấn Lộc', 'loc.nguyencse@gmail.com', '0347651292', 37, 3, 0, '462 trần hưng đạo phường 2 quận 5', '2021-01-17 18:10:11', 45000, 0),
-(41, 'Nguyễn Tấn Lộc', 'loc.nguyencse@gmail.com', '0347651292', 36, 0, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 05:20:08', 75000, 0),
-(42, 'Nguyễn Tấn Lộc', 'loc.nguyencse@gmail.com', '0347651292', 36, 0, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 11:21:03', 340000, 0),
+(41, 'Nguyễn Tấn Lộc', 'loc.nguyencse@gmail.com', '0347651292', 36, 1, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 05:20:08', 75000, 0),
+(42, 'Nguyễn Tấn Lộc', 'loc.nguyencse@gmail.com', '0347651292', 36, 1, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 11:21:03', 340000, 0),
 (43, 'Nguyễn Tấn Lộc', 'ntnlc81@yahoo.com', '0347651292', 36, 4, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 11:23:46', 120000, 0),
 (44, 'Nguyễn Tấn Lộc', 'loc.nguyencse@gmail.com', '0347651292', 36, 3, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 06:02:01', 75000, 16),
 (45, 'Nguyễn Tấn Lộc', 'loc.nguyencse1@gmail.com', '0347651292', 36, 3, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 06:05:42', 245000, 5),
-(46, 'Nguyễn Tấn Lộc', 'loc.nguyencse@gmail.com', '0347651292', 36, 0, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 12:09:41', 135000, 0),
+(46, 'Nguyễn Tấn Lộc', 'loc.nguyencse@gmail.com', '0347651292', 36, 2, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 12:09:41', 135000, 0),
 (47, 'Nguyễn Tấn Lộc', 'loc.nguyencse1@gmail.com', '0347651292', 36, 3, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 12:10:27', 185000, 20),
-(48, 'Nguyễn Tấn Lộc', 'loc.nguyencse1@gmail.com', '0347651292', 36, 0, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 06:21:58', 30000, 0);
+(48, 'Nguyễn Tấn Lộc', 'loc.nguyencse1@gmail.com', '0347651292', 36, 1, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 06:21:58', 30000, 0);
 
 -- --------------------------------------------------------
 
@@ -304,7 +304,9 @@ CREATE TABLE `role` (
 
 INSERT INTO `role` (`id`, `name`) VALUES
 (1, 'User'),
-(2, 'Admin');
+(2, 'Admin'),
+(3, 'staff'),
+(4, 'chef');
 
 -- --------------------------------------------------------
 
@@ -363,7 +365,7 @@ CREATE TABLE `tokens` (
 
 INSERT INTO `tokens` (`user_id`, `token`, `created_at`) VALUES
 (36, '1cba373f538df802cc3bb30bdf12b982', '2021-11-17 18:15:37'),
-(46, '1139eb4ea51490346cb3ea6b8b45c576', '2021-11-19 06:39:37');
+(48, '93636418550d1f15501230e561890b2a', '2021-11-19 10:51:44');
 
 -- --------------------------------------------------------
 
@@ -398,7 +400,9 @@ INSERT INTO `user` (`id`, `fullname`, `email`, `phone_number`, `address`, `passw
 (43, 'Nguyễn Tấn Lộc132', 'loc.nguyencs123e@gmail.com', '0347651292', '462 trần hưng đạo phường 2 quận 5', 'e5cec731ca0d779baf1250fb20d63c61', 1, 1),
 (44, 'Nguyễn Tấn Lộc132', 'loc.nguyenc132s123e@gmail.com', '0347651292', '462 trần hưng đạo phường 2 quận 5', '43c4e9a12b3acc364057ee4799a1d781', 1, 1),
 (45, 'Nguyễn Tấn Lộc132', 'loc.nguyenc133212s123e@gmail.com', '0347651292', '462 trần hưng đạo phường 2 quận 5', '105faa207fab8ef35d8434e80d11ff38', 1, 1),
-(46, 'admin', 'admin@gmail.com', '9876543212', 'Tây Ninh', 'b4cbd48886a5331c5eb2fedadabe311c', 2, 0);
+(46, 'admin', 'admin@gmail.com', '9876543212', 'Tây Ninh', 'b4cbd48886a5331c5eb2fedadabe311c', 2, 0),
+(47, 'Staff', 'staff@gmail.com', '1234567891', 'staff@gmail.com', 'b4cbd48886a5331c5eb2fedadabe311c', 3, 0),
+(48, 'chef', 'chef@gmail.com', '2345678912', 'chef', 'b4cbd48886a5331c5eb2fedadabe311c', 4, 0);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -517,7 +521,7 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT cho bảng `role`
 --
 ALTER TABLE `role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `table_reservation`
@@ -529,7 +533,7 @@ ALTER TABLE `table_reservation`
 -- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
