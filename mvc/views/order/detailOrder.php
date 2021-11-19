@@ -28,9 +28,9 @@
 					<th>'.$i.'</th>
 					<td><img src="'.fixUrl($data["detailOrder"][$i]['thumbnail']).'" style="height: 120px"/></td>
 					<td>'.$data["detailOrder"][$i]['title'].'</td>
-					<td>'.$data["detailOrder"][$i]['price'].'</td>
+					<td>'.number_format($data["detailOrder"][$i]['price']).' đ</td>
 					<td>'.$data["detailOrder"][$i]['num'].'</td>
-					<td>'.$data["detailOrder"][$i]['total_money'].'</td>
+					<td>'.number_format($data["detailOrder"][$i]['total_money']).' đ</td>
 				</tr>';
 	}
 ?>
@@ -40,7 +40,7 @@
 					<td></td>
 					<td></td>
 					<th>Tổng Tiền</th>
-					<th><?=$data["orderItem"]['total_money']?></th>
+					<th><?=number_format($data["orderItem"]['total_money'])?> đ</th>
 				</tr>
 			</tbody>
 		</table>
@@ -48,7 +48,7 @@
 	<div class="col-md-4">
 		<table class="table table-bordered table-hover" style="margin-top: 20px;">
 			<tr>
-				<th>Họ & Tên: </th>
+				<th>Tên: </th>
 				<td><?=$data["orderItem"]['fullname']?></td>
 			</tr>
 			<tr>
@@ -61,7 +61,7 @@
 			</tr>
 			<tr>
 				<th>Phone: </th>
-				<td><?=$data["orderItem"]['phone_number']?></td>
+				<td><?=$data["orderItem"]['phone']?></td>
 			</tr>
 		</table>
 	</div>

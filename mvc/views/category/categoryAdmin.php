@@ -7,6 +7,7 @@
 <div class="row" style="margin-top: 20px;">
 	<div class="col-md-12" style="margin-bottom: 20px;">
 		<h3>Quản Lý Danh Mục Sản Phẩm</h3>
+		<p class="d-none" id="deleteSuccess"><?=$data["deleteSuccess"]?></p>
 	</div>
 	<div class="col-md-6">
 		<form method="post" action="http://localhost/Laptrinhweb/CategoryAdmin/insertCategoryController">
@@ -48,7 +49,14 @@
 		</table>
 	</div>
 </div>
+<script type="text/javascript">
 
+	var deleteSuccess = document.getElementById("deleteSuccess").innerHTML;
+	if(deleteSuccess == 1){
+		alert("Xóa thất bại!!! Vui lòng xóa hết sản phẩm của danh mục!!!")
+	}
+
+</script>
 <?php
 	require_once('mvc/views/blocks/footer_admin.php');
 ?>

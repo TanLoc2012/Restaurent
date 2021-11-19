@@ -8,10 +8,11 @@ class CategoryAdmin extends Controller{
         $this->categoryModel = $this->model("CategoryModel");
     }
 
-    public function SayHi(){
+    public function SayHi($deleteSuccess=0){
         $category = $this->categoryModel->getCategory();
         $this->view("category/categoryAdmin",[
-            "category"=>$category
+            "category"=>$category,
+            "deleteSuccess"=>$deleteSuccess
         ]);
     }
 
@@ -43,7 +44,15 @@ class CategoryAdmin extends Controller{
 
     public function deleteCategoryController($id) {
         $data = $this->categoryModel->selectCategoryDelete($id);
-        header('Location: http://localhost/Laptrinhweb/CategoryAdmin');
+        if($data)
+            header('Location: http://localhost/Laptrinhweb/CategoryAdmin');
+        else header('Location: http://localhost/Laptrinhweb/CategoryAdmin/SayHi/1');
+    }
+
+    public function checkDeleteCategoryController($id) {
+        $data = $this->categoryModel->selectCategoryDelete($id);
+        var_dump($data);
+        return $data;
     }
 } 
 

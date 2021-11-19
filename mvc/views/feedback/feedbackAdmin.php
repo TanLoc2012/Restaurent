@@ -13,10 +13,9 @@
 				<tr>
 					<th>STT</th>
 					<th>Tên</th>
-					<th>Họ</th>
 					<th>SĐT</th>
 					<th>Email</th>
-					<th>Chủ Đề</th>
+					<th>Tên sản phẩm</th>
 					<th>Nội Dung</th>
 					<th>Ngày Tạo</th>
 					<th style="width: 120px"></th>
@@ -28,11 +27,10 @@
 	for($i=0; $i<$countFeedback; $i++) {
 		echo '<tr>
 					<th>'.$i.'</th>
-					<td>'.$data["allFeedback"][$i]['firstname'].'</td>
-					<td>'.$data["allFeedback"][$i]['lastname'].'</td>
+					<td>'.$data["allFeedback"][$i]['fullname'].'</td>
 					<td>'.$data["allFeedback"][$i]['phone_number'].'</td>
 					<td>'.$data["allFeedback"][$i]['email'].'</td>
-					<td>'.$data["allFeedback"][$i]['subject_name'].'</td>
+					<td>'.$data["allFeedback"][$i]['title'].'</td>
 					<td>'.$data["allFeedback"][$i]['note'].'</td>
 					<td>'.$data["allFeedback"][$i]['updated_at'].'</td>
 					<td style="width: 50px">';

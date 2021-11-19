@@ -9,7 +9,7 @@ class ProductAdmin extends Controller{
     }
 
     public function SayHi(){
-        $allProduct = $this->productModel->getAllProduct();
+        $allProduct = $this->productModel->getAllProduct(1);
         
         $this->view("product/productAdmin",[
             "allProduct"=>$allProduct
