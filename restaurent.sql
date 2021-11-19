@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 19, 2021 lúc 01:26 PM
+-- Thời gian đã tạo: Th10 19, 2021 lúc 03:53 PM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
--- Phiên bản PHP: 7.4.24
+-- Phiên bản PHP: 8.0.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -108,12 +108,17 @@ INSERT INTO `orders` (`id`, `fullname`, `email`, `phone`, `user_id`, `status`, `
 (40, 'Nguyễn Tấn Lộc', 'loc.nguyencse@gmail.com', '0347651292', 37, 3, 0, '462 trần hưng đạo phường 2 quận 5', '2021-01-17 18:10:11', 45000, 0),
 (41, 'Nguyễn Tấn Lộc', 'loc.nguyencse@gmail.com', '0347651292', 36, 1, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 05:20:08', 75000, 0),
 (42, 'Nguyễn Tấn Lộc', 'loc.nguyencse@gmail.com', '0347651292', 36, 1, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 11:21:03', 340000, 0),
-(43, 'Nguyễn Tấn Lộc', 'ntnlc81@yahoo.com', '0347651292', 36, 4, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 11:23:46', 120000, 0),
+(43, 'Nguyễn Tấn Lộc', 'ntnlc81@yahoo.com', '0347651292', 36, 1, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 11:23:46', 120000, 0),
 (44, 'Nguyễn Tấn Lộc', 'loc.nguyencse@gmail.com', '0347651292', 36, 3, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 06:02:01', 75000, 16),
 (45, 'Nguyễn Tấn Lộc', 'loc.nguyencse1@gmail.com', '0347651292', 36, 3, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 06:05:42', 245000, 5),
 (46, 'Nguyễn Tấn Lộc', 'loc.nguyencse@gmail.com', '0347651292', 36, 2, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 12:09:41', 135000, 0),
 (47, 'Nguyễn Tấn Lộc', 'loc.nguyencse1@gmail.com', '0347651292', 36, 3, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 12:10:27', 185000, 20),
-(48, 'Nguyễn Tấn Lộc', 'loc.nguyencse1@gmail.com', '0347651292', 36, 1, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 06:21:58', 30000, 0);
+(48, 'Nguyễn Tấn Lộc', 'loc.nguyencse1@gmail.com', '0347651292', 36, 1, 0, '462 trần hưng đạo phường 2 quận 5', '2021-11-19 06:21:58', 30000, 0),
+(49, 'lê huy ngọ', 'www.huyngo@gmail.com', '+84348084257', 49, 1, 0, 'thoon 6', '2021-11-19 13:34:02', 815000, 0),
+(50, 'lê huy ngọ', 'www.huyngo@gmail.com', '+84348084257', 49, 2, 0, 'thoon 6', '2021-11-19 13:34:17', 50000, 0),
+(51, 'lê huy ngọ', 'www.huyngo@gmail.com', '+84348084257', 49, 2, 0, 'thoon 6', '2021-11-19 13:34:32', 70000, 0),
+(52, 'le huy ngo', 'www.huyngo@gmail.com', '0348084257', 49, 0, 0, 'thon 6', '2021-11-19 13:40:50', 45000, 11),
+(53, 'lê huy ngọ', 'www.huyngo@gmail.com', '+84348084257', 49, 0, 0, 'thoon 6', '2021-11-19 14:23:35', 50000, 0);
 
 -- --------------------------------------------------------
 
@@ -196,7 +201,18 @@ INSERT INTO `order_details` (`id`, `order_id`, `product_id`, `price`, `num`, `to
 (112, 47, 49, 50000, 1, 50000),
 (113, 47, 50, 45000, 2, 90000),
 (114, 47, 52, 45000, 1, 45000),
-(115, 48, 51, 30000, 1, 30000);
+(115, 48, 51, 30000, 1, 30000),
+(116, 49, 50, 45000, 1, 45000),
+(117, 49, 52, 45000, 1, 45000),
+(118, 49, 53, 70000, 1, 70000),
+(119, 49, 54, 275000, 1, 275000),
+(120, 49, 55, 175000, 1, 175000),
+(121, 49, 56, 175000, 1, 175000),
+(122, 49, 71, 30000, 1, 30000),
+(123, 50, 49, 50000, 1, 50000),
+(124, 51, 59, 70000, 1, 70000),
+(125, 52, 50, 45000, 1, 45000),
+(126, 53, 49, 50000, 1, 50000);
 
 -- --------------------------------------------------------
 
@@ -285,7 +301,73 @@ INSERT INTO `product` (`id`, `category_id`, `title`, `price`, `discount`, `thumb
 (69, 113, 'Cóc ngâm chua', 30000, 0, 'https://cdn.tgdd.vn/2021/11/CookDishThumb/cach-lam-cach-lam-coc-bao-tu-ngam-chua-ngot-don-gian-thumb-620x620.jpg', 'Cóc ngâm chua', NULL, NULL, 0),
 (70, 113, 'Chân gà sả tắc', 80000, 0, 'https://cdn.tgdd.vn/2021/09/CookDishThumb/3-cach-lam-chan-ga-sa-tac-gion-dam-vi-khong-the-cuong-lai-thumb-620x620.jpg', 'Chân gà sả tắc', NULL, NULL, 0),
 (71, 113, 'Tàu hủ', 30000, 0, 'https://cdn.tgdd.vn/2021/08/CookProductThumb/Untitled-5-620x620.jpg', 'Tàu hủ', NULL, NULL, 0),
-(72, 113, 'Bánh chuối yến mạch', 30000, 35000, 'https://cdn.tgdd.vn/2021/11/CookDishThumb/cach-lam-banh-chuoi-yen-mach-giam-can-cuc-don-gian-vua-ngon-thumb-620x620.jpg', 'Bánh chuối yến mạch', NULL, NULL, 0);
+(72, 113, 'Bánh chuối yến mạch', 30000, 35000, 'https://cdn.tgdd.vn/2021/11/CookDishThumb/cach-lam-banh-chuoi-yen-mach-giam-can-cuc-don-gian-vua-ngon-thumb-620x620.jpg', 'Bánh chuối yến mạch', NULL, NULL, 0),
+(74, 108, 'Canh tàu hũ', 80000, 12, 'aa', 'a', NULL, NULL, 0),
+(75, 112, 'Coca', 17600, 12, 'aa', '', NULL, NULL, 0),
+(76, 112, 'Socola', 13000, 12, 'a', '', NULL, NULL, 0),
+(77, 108, 'Canh cá', 17100, 12, 'aa', '', NULL, NULL, 0),
+(78, 108, 'Canh chua', 150000, 12, 'a', '', NULL, NULL, 0),
+(79, 108, 'Canh cua', 15000, 12, 'a', '', NULL, NULL, 0),
+(80, 108, 'Canh lươn', 189000, 12, 'a', '', NULL, NULL, 0),
+(81, 108, 'Canh cá lóc', 150000, 12, 'a', '', NULL, NULL, 0),
+(82, 108, 'Sữa', 15000, 12, 'a', '', NULL, NULL, 0),
+(83, 112, 'Soda chanh', 15000, 12, 'a', 'a', NULL, NULL, 0),
+(84, 112, 'Pesi', 12000, 489, 'a', '', NULL, NULL, 0),
+(86, 109, 'Bò nướng', 123000, 12, 'a', '', NULL, NULL, 0),
+(87, 109, 'Cá nướng', 123000, 12, 'b', 'a', NULL, NULL, 0),
+(88, 109, 'Lươn nướng', 130000, 12, 'c', '', NULL, NULL, 0),
+(89, 109, 'Giò nướng', 123566, 12, 'a', '', NULL, NULL, 0),
+(90, 109, 'Ngan nướng', 1500000, 12, 'a', '', NULL, NULL, 0),
+(91, 109, 'Tôm nướng', 150000, 12, 'a', '', NULL, NULL, 0),
+(92, 109, 'Mực nướng', 150000, 12, 'a', '', NULL, NULL, 0),
+(93, 109, 'Cá nướng tỏi', 150000, 12, 'a', '', NULL, NULL, 0),
+(94, 109, 'Heo quay mỡ', 150000, 12, 'a', '', NULL, NULL, 0),
+(95, 109, 'Gà nướng đất sét', 123000, 12, 'aa', '', NULL, NULL, 0),
+(96, 109, 'Bò than', 140000, 12, 'a', '', NULL, NULL, 0),
+(97, 110, 'Phở chay', 150000, 12, 'a', 'a', NULL, NULL, 0),
+(98, 110, 'Gà chay', 150000, 12, 'a', '', NULL, NULL, 0),
+(99, 110, 'Bún huế chay', 190000, 12, 'a', '', NULL, NULL, 0),
+(100, 110, 'Sa lát', 169000, 489, 'a', 'a', NULL, NULL, 0),
+(101, 110, 'Bánh mì chay', 20000, 1000, 'a', 'a', NULL, NULL, 0),
+(102, 113, 'Bánh mì ngọt', 5000, 489, 'a', 'a', NULL, NULL, 0),
+(103, 110, 'Rau muống xào', 50000, 10000, 'a', 'a', NULL, NULL, 0),
+(104, 110, 'Cà tím chiên', 50000, 1000, 'a', '', NULL, NULL, 0),
+(105, 110, 'Cà chua phi hành', 14000, 1000, 'a', '', NULL, NULL, 0),
+(106, 110, 'Đậu hũ thối', 150000, 10000, 'a', 'a', NULL, NULL, 0),
+(107, 110, 'Tàu hũ sốt cà chua', 89000, 1000, 'a', 'a', NULL, NULL, 0),
+(108, 110, 'Ớt đà lạt', 40000, 1000, 'a', 'a', NULL, NULL, 0),
+(109, 108, 'Hủ tiếu lòng', 140000, 10000, 'a', 'a', NULL, NULL, 0),
+(110, 108, 'Mì xào gà', 169000, 10000, 'a', 'a', NULL, NULL, 0),
+(111, 108, 'Phở chân gà', 190000, 10000, 'a', 'a', NULL, NULL, 0),
+(112, 108, 'Bún thịt nướng', 170000, 10000, 'a', 'a', NULL, NULL, 0),
+(113, 112, 'Nước cốt dừa', 15000, 10000, 'a', 'a', NULL, NULL, 0),
+(114, 112, 'Nước cam', 14000, 1000, 'a', 'a', NULL, NULL, 0),
+(115, 112, 'Dưa hấu xay', 20000, 1000, 'a', 'a', NULL, NULL, 0),
+(116, 112, 'Sting', 15000, 1000, 'a', 'a', NULL, NULL, 0),
+(117, 112, 'Number one', 17000, 10000, 'a', 'a', NULL, NULL, 0),
+(118, 112, 'Nước chanh muối', 16000, 1000, 'a', 'a', NULL, NULL, 0),
+(119, 112, 'Sinh tố dâu', 14000, 1000, 'a', 'a', NULL, NULL, 0),
+(120, 111, 'Thịt kho tàu', 150000, 10000, 'a', 'â', NULL, NULL, 0),
+(121, 111, 'Cút kho', 60000, 10000, 'a', 'a', NULL, NULL, 0),
+(122, 111, 'Lươn kho mặn', 70000, 10000, 'a', 'a', NULL, NULL, 0),
+(123, 111, 'Vịt kho hành', 169000, 10000, 'a', 'a', NULL, NULL, 0),
+(124, 111, 'Vịt kho tộ', 160000, 10000, 'a', 'a', NULL, NULL, 0),
+(125, 111, 'Cá lóc kho', 145000, 10000, 'a', 'a', NULL, NULL, 0),
+(126, 111, 'Ếch kho hành', 178000, 14000, 'a', 'a', NULL, NULL, 0),
+(127, 111, 'Thịt heo kho lá lốt', 156000, 10000, 'a', 'a', NULL, NULL, 0),
+(128, 111, 'Thịt heo kho cay', 149000, 10000, 'a', 'a', NULL, NULL, 0),
+(129, 111, 'Cá kho Vũ Đại', 1000000, 10000, 'a', 'a', NULL, NULL, 0),
+(130, 111, 'Gà kho sả ớt', 178000, 14000, 'a', 'a', NULL, NULL, 0),
+(131, 113, 'Xoài lắc', 40000, 1000, 'a', 'a', NULL, NULL, 0),
+(132, 113, 'Cóc giầm', 17000, 1000, 'a', 'a', NULL, NULL, 0),
+(133, 113, 'Ổi Đà Lạt', 17000, 1000, 'a', 'a', NULL, NULL, 0),
+(134, 113, 'O liu Mĩ', 100000, 10000, 'a', 'a', NULL, NULL, 0),
+(135, 113, 'Oreon', 20000, 1000, 'a', 'a', NULL, NULL, 0),
+(136, 113, 'Kem trái cây', 14000, 1000, 'a', 'a', NULL, NULL, 0),
+(137, 113, 'Kem sữa', 14600, 1000, 'a', 'a', NULL, NULL, 0),
+(138, 113, 'Kem tràng tiền', 17900, 489, 'a', 'a', NULL, NULL, 0),
+(139, 113, 'Khô gà', 17000, 1000, 'a', 'a', NULL, NULL, 0),
+(140, 113, 'Bánh quy', 17000, 1000, 'a', 'a', NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -336,7 +418,7 @@ INSERT INTO `table_reservation` (`id`, `note`, `status`) VALUES
 (8, 'Bàn 8(bàn nhỏ) - 4 chỗ ngồi', 0),
 (9, 'Bàn 9(bàn nhỏ) - 4 chỗ ngồi', 0),
 (10, 'Bàn 10(bàn nhỏ) - 4 chỗ ngồi', 0),
-(11, 'Bàn 11(bàn nhỏ) - 4 chỗ ngồi', 0),
+(11, 'Bàn 11(bàn nhỏ) - 4 chỗ ngồi', 1),
 (12, 'Bàn 12(bàn nhỏ) - 4 chỗ ngồi', 0),
 (13, 'Bàn 13(bàn nhỏ) - 4 chỗ ngồi', 0),
 (14, 'Bàn 14(bàn nhỏ) - 4 chỗ ngồi', 0),
@@ -365,7 +447,9 @@ CREATE TABLE `tokens` (
 
 INSERT INTO `tokens` (`user_id`, `token`, `created_at`) VALUES
 (36, '1cba373f538df802cc3bb30bdf12b982', '2021-11-17 18:15:37'),
-(48, '93636418550d1f15501230e561890b2a', '2021-11-19 10:51:44');
+(46, '55264075270c5966fa72d6a0995e83c8', '2021-11-19 14:47:36'),
+(48, '93636418550d1f15501230e561890b2a', '2021-11-19 10:51:44'),
+(49, 'c85c48d5f9b6b7dec0ecc60a01d9b45f', '2021-11-19 13:40:15');
 
 -- --------------------------------------------------------
 
@@ -402,7 +486,8 @@ INSERT INTO `user` (`id`, `fullname`, `email`, `phone_number`, `address`, `passw
 (45, 'Nguyễn Tấn Lộc132', 'loc.nguyenc133212s123e@gmail.com', '0347651292', '462 trần hưng đạo phường 2 quận 5', '105faa207fab8ef35d8434e80d11ff38', 1, 1),
 (46, 'admin', 'admin@gmail.com', '9876543212', 'Tây Ninh', 'b4cbd48886a5331c5eb2fedadabe311c', 2, 0),
 (47, 'Staff', 'staff@gmail.com', '1234567891', 'staff@gmail.com', 'b4cbd48886a5331c5eb2fedadabe311c', 3, 0),
-(48, 'chef', 'chef@gmail.com', '2345678912', 'chef', 'b4cbd48886a5331c5eb2fedadabe311c', 4, 0);
+(48, 'chef', 'chef@gmail.com', '2345678912', 'chef', 'b4cbd48886a5331c5eb2fedadabe311c', 4, 0),
+(49, 'lê huy ngọ', 'www.huyngo@gmail.com', '+84348084257', 'thoon 6', 'b4cbd48886a5331c5eb2fedadabe311c', 1, 0);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -497,13 +582,13 @@ ALTER TABLE `feedback`
 -- AUTO_INCREMENT cho bảng `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT cho bảng `order_details`
 --
 ALTER TABLE `order_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=116;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=127;
 
 --
 -- AUTO_INCREMENT cho bảng `payments`
@@ -515,7 +600,7 @@ ALTER TABLE `payments`
 -- AUTO_INCREMENT cho bảng `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
 
 --
 -- AUTO_INCREMENT cho bảng `role`
@@ -533,7 +618,7 @@ ALTER TABLE `table_reservation`
 -- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
