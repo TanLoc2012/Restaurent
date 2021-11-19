@@ -8,6 +8,17 @@
     else $user = getUserToken();
     if($user != null) {
         $fullname = $user["fullname"];
+        $role_id = $user["role_id"];
+    }
+    if(isset($data["render"]) && isset($role_id)){
+        if($data["render"]=="staff"){
+            if($role_id != 3)
+                header("Location: http://localhost/Laptrinhweb/Home");
+        }
+        else if($data["render"]=="chef"){
+            if($role_id != 4)
+                header("Location: http://localhost/Laptrinhweb/Home");
+        }
     }
     $cart = [];
     if(isset($_COOKIE['cart'])) {
@@ -99,7 +110,8 @@
                         else{
                             if($user["role_id"] == 2) echo '<a class="dropdown-item" href="http://localhost/Laptrinhweb/Admin">Quản lý trang web</a>';
                             echo '<a class="dropdown-item" href="http://localhost/Laptrinhweb/Home/quanlytaikhoan">Quản lý tài khoản</a>';
-                            echo '<a class="dropdown-item" href="http://localhost/Laptrinhweb/Home/quanlydonhang/'.$user["id"].'">Quản lý đơn hàng</a>';
+                            if($user["role_id"] == 3) echo '<a class="dropdown-item" href="http://localhost/Laptrinhweb/Home/staff">Quản lý đơn hàng</a>';
+                            else echo '<a class="dropdown-item" href="http://localhost/Laptrinhweb/Home/quanlydonhang/'.$user["id"].'">Quản lý đơn hàng</a>';
                             echo '<a class="dropdown-item" href="http://localhost/Laptrinhweb/Login/UserLogout">Đăng xuất</a>';
                         } 
                             

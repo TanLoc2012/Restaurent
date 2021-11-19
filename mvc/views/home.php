@@ -44,5 +44,11 @@ else if($data["render"] == "paymentOnline"){
 else if($data["render"] == "paymentReturn"){
     require_once "mvc/views/components/paymentReturn.php";
 }
+else if($data["render"] == "staff"){
+    require_once "mvc/views/components/staff.php";
+}
+else if($data["render"] == "chef"){
+    require_once "mvc/views/components/chef.php";
+}
 
 require_once "mvc/views/blocks/footer.php";

@@ -3,7 +3,13 @@
     $user = getUserToken();
     if($user != null) {
         if($user["role_id"] == 1) {
-            header('Location: http://localhost/Laptrinhweb/Login');
+            header('Location: http://localhost/Laptrinhweb/Home');
+        }
+        else if($user["role_id"] == 3) {
+            header('Location: http://localhost/Laptrinhweb/Home/staff');
+        }
+        if($user["role_id"] == 4) {
+            header('Location: http://localhost/Laptrinhweb/Home/chef');
         }
     }
     else header('Location: http://localhost/Laptrinhweb/Home');

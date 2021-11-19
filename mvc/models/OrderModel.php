@@ -79,6 +79,24 @@ class OrderModel extends DB{
         return $orderItem;
     }
 
+    public function getStaffOrder(){
+        $sql = "SELECT id,fullname,phone,user_id,total_money,table_id,status,created_at
+                FROM orders
+                WHERE status=4 OR status=0
+                ORDER BY id ASC";
+        $data = $this->executeResult($sql);
+        return $data;
+    }
+
+    public function getChefOrder(){
+        $sql = "SELECT id,fullname,phone,user_id,total_money,table_id,status,created_at
+                FROM orders
+                WHERE status=1
+                ORDER BY id ASC";
+        $data = $this->executeResult($sql);
+        return $data;
+    }
+
     public function getTable(){
         $sql = "SELECT id, note
                 FROM table_reservation 

@@ -29,9 +29,14 @@ class Login extends Controller{
             if($kq["result"]) {
                 if($kq["role_id"] == 1) {
                     header('Location: http://localhost/Laptrinhweb/Home');
-
                 }
-                else {
+                else if($kq["role_id"] == 3){
+                    header('Location: http://localhost/Laptrinhweb/Home/staff');
+                }
+                else if($kq["role_id"] == 4){
+                    header('Location: http://localhost/Laptrinhweb/Home/chef');
+                }
+                else if($kq["role_id"] == 2){
                     header('Location: http://localhost/Laptrinhweb/admin');
                 }
             }

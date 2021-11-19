@@ -275,6 +275,28 @@ class Home extends Controller{
             "allCategory"=>$this->allCategory
         ]);
     }
+
+    public function staff(){
+        $orderModel = $this->model("OrderModel");
+        $staffOrder = $orderModel->getStaffOrder();
+
+        $this->view("home",[
+            "render"=>"staff",
+            "allCategory"=>$this->allCategory,
+            "staffOrder"=>$staffOrder
+        ]);
+    }
+
+    public function chef(){
+        $orderModel = $this->model("OrderModel");
+        $chefOrder = $orderModel->getChefOrder();
+
+        $this->view("home",[
+            "render"=>"chef",
+            "allCategory"=>$this->allCategory,
+            "chefOrder"=>$chefOrder
+        ]);
+    }
 }
 
 ?>

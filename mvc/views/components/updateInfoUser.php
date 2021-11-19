@@ -16,6 +16,7 @@ var_dump($user);
 					  <label for="usr">Họ & Tên:</label>
 					  <input required="true" type="text" class="form-control" id="usr" name="fullname" value="<?=$user["fullname"]?>">
 					  <input type="text" name="id" value="<?=$user["id"]?>" hidden="true">
+					  <input type="text" name="role_id" value="<?=$user["role_id"]?>" hidden="true">
 					  <input type="text" name="updateInfoUser" value="1" hidden="true">
 					</div>
 					<div class="form-group">
