@@ -3,10 +3,14 @@
 class Admin extends Controller{
 
     public function __construct(){
+        $this->orderModel = $this->model("OrderModel");
     }
 
     function SayHi() {
-        $this->view("admin",[]);
+        $doanhthu = $this->orderModel->getDoanhthu();
+        $this->view("admin",[
+            "doanhthu"=>$doanhthu
+        ]);
     }
 }
 

@@ -63,8 +63,8 @@ function executeResultU($sql) {
 	return $data;
 }
 
-function getUserToken() {
-	if(isset($_SESSION['user'])) {
+function getUserToken($noSession=0) {
+	if(isset($_SESSION['user']) && $noSession==0) {
 		return $_SESSION['user'];
 	}
 	$token = getCookie('token');
@@ -82,8 +82,6 @@ function getUserToken() {
 
 	return null;
 }
-
-
 
 function fixUrl($thumbnail, $rootPath = "http://localhost/Laptrinhweb/public/images/") {
 	if(stripos($thumbnail, 'http://') !== false || stripos($thumbnail, 'https://') !== false) {

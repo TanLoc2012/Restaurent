@@ -1,7 +1,6 @@
 <?php
 require_once "config.php";
 class DB {
-    // insert, update, delete, select
     // SQL: insert, update, delete
     function execute($sql) {
         //open connection
@@ -34,7 +33,6 @@ class DB {
                     $data[] = $row;
                 }
             }
-    
             //close connection
             mysqli_close($conn);
         }
